@@ -1,1 +1,11 @@
+-- 1
+SELECT cityy.city, countryy.country
+FROM city cityy LEFT JOIN country countryy ON cityy.country_id = countryy.country_id;
 
+-- 2
+SELECT paymentt.payment_id, customerr.first_name, customerr.last_name
+FROM customer customerr RIGHT JOIN payment paymentt ON customerr.customer_id = paymentt.customer_id;
+
+-- 3
+SELECT rentall.rental_id, customerr.first_name, customerr.last_name
+FROM customer customerr FULL OUTER JOIN rental rentall ON customerr.customer_id = rentall.customer_id;
